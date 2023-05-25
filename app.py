@@ -57,7 +57,7 @@ for item in solution_list:
 
             index = 1
             for div in me_list.find_all('div', class_='ir-box'):
-                if 'ir-scorebox' in div.get('class') and 'ir-scorebox-accepted' in div.get('class') and len(div.text.strip()) == 1:
+                if 'ir-scorebox' in div.get('class') and 'ir-scorebox-accepted' in div.get('class'):
                     td = div.parent
                     href = td.get('href') if td is not None else None
                     download_source_code(href, name, index)
